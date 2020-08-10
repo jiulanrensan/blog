@@ -8,12 +8,11 @@
 * 使用 快捷键 Ctrl+Shift+I (Windows) 或 Cmd+Opt+I (Mac)
 
 可以看到页面如下
-
-<div style="padding: 20px 0;text-align: center;box-shadow: 2px 4px 5px 0px #00000030">
-<img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/screen.png" width="60%" />
+<div align="center">
+  <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/screen.png" width="60%" />
 </div>
 
-<br>
+<hr>
 
 ### 2. 顶部的这些element,console等等分别有什么用，那几个最常用？
 
