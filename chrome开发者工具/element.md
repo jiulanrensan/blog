@@ -14,9 +14,9 @@
 
 ![编辑](https://github.com/jiulanrensan/blog/blob/master/chrome%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7/img/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20200810155955.png)
 
-![调色板](https://github.com/jiulanrensan/blog/blob/master/chrome%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7/img/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20200810160051.png)
 
 你还可以直接选取页面颜色，在调色板取色，调透明度等等...
+![调色板](https://github.com/jiulanrensan/blog/blob/master/chrome%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7/img/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20200810160051.png)
 
 ---
 
@@ -35,7 +35,7 @@
 .cls旁边的:hov就是当前选择元素的模拟操作，比如下图所示，鼠标悬浮"更多"字体上会浮现其他内容，那我要模拟鼠标悬浮这个操作，直接勾选":hover"就行
 
 ---
-### 5. box-shadow的阴影好难弄得好看？
+### 5. box-shadow的阴影很难弄得好看？
 
 阴影直接手动操作画出来
 
@@ -47,3 +47,13 @@
 [上一章：首页](https://github.com/jiulanrensan/blog/blob/master/chrome%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7/index.md)
 
 [下一章：]()
+
+
+<style type="text/css">
+img{
+  display: block;
+  width: 70%;
+  text-align: center; 
+  margin: 0 auto;
+}
+</style>

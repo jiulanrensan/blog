@@ -26,3 +26,14 @@
 剩下的我也不了解也没用过,上面的7项我会分七篇文章逐一讲解,目录如下
 
 1. [element](https://github.com/jiulanrensan/blog/blob/master/chrome%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7/element.md)
+
+
+
+<style type="text/css">
+img{
+  display: block;
+  width: 70%;
+  text-align: center; 
+  margin: 0 auto;
+}
+</style>
