@@ -9,11 +9,11 @@
 
 可以看到页面如下
 
-<div align=center>
+<div align="center" style="padding: 20px 0">
 <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/screen.png" width="60%" />
 </div>
 
----
+<br>
 
 ### 2. 顶部的这些element,console等等分别有什么用，那几个最常用？
 
