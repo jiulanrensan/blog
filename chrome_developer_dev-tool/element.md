@@ -1,10 +1,6 @@
 ## element面板
 ### 1. 我页面上某个html元素的样式不对劲，我该怎么去找这个元素样式呢？
 
-点击红框1，然后鼠标移动到左侧目标元素，右侧的element面板会自动展开到你选取的那个元素上，然后在点击红框2的style，即展示当前元素的css样式，越靠上css权重越高，旁边则是盒子模型的展示图
-
-如图所示:
-
 <div align=center>
 <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/select_dom.gif" 
 width="60%" />
@@ -24,7 +20,6 @@ width="60%" />
 ---
 
 ### 3.  一个元素盒子会有多个class，想查看某一个class效果？
-点击1处的.cls，即当前选中元素的相关css，在2处展示，不勾选则表示不引用这个class
 
 <div align=center>
 <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/select_cls.gif" width="60%" />
