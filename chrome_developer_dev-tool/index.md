@@ -10,7 +10,7 @@
 可以看到页面如下
 
 <div align=center>
-<img src="https://github.com/jiulanrensan/blog/blob/master/chrome%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7/img/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20200810145733.png" width="60%" />
+<img src="https://github.com/jiulanrensan/blog/tree/master/chrome_developer_dev-tool/img/screen.png" width="60%" />
 </div>
 
 ---
@@ -27,5 +27,5 @@
 
 剩下的我也不了解也没用过,上面的7项我会分七篇文章逐一讲解,目录如下
 
-1. [element](https://github.com/jiulanrensan/blog/blob/master/chrome%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7/element.md)
+1. [element](https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/element.md)
 
