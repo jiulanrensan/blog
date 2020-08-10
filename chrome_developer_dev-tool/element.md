@@ -6,8 +6,9 @@
 如图所示:
 
 <div align=center>
-<img src="https://github.com/jiulanrensan/blog/tree/master/chrome_developer_dev-tool/img/select_dom.gif" 
+<img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/select_dom.gif" 
 width="60%" />
+
 </div>
 
 ---
@@ -17,7 +18,7 @@ width="60%" />
 相信你已经发现可以在element面板直接修改dom结构的tag标签，class名称等等，也可以在styles那直接输入样式，浏览器会及时展示，所以你可以在这里写好再复制过去
 
 <div align=center>
-<img src="https://github.com/jiulanrensan/blog/tree/master/chrome_developer_dev-tool/img/edit.gif" width="60%" />
+<img src="https://github.com/jiulanrensan/blog/blog/master/chrome_developer_dev-tool/img/edit.gif" width="60%" />
 </div>
 
 ---
@@ -26,7 +27,7 @@ width="60%" />
 点击1处的.cls，即当前选中元素的相关css，在2处展示，不勾选则表示不引用这个class
 
 <div align=center>
-<img src="https://github.com/jiulanrensan/blog/tree/master/chrome_developer_dev-tool/img/select_cls.gif" width="60%" />
+<img src="https://github.com/jiulanrensan/blog/blog/master/chrome_developer_dev-tool/img/select_cls.gif" width="60%" />
 </div>
 
 ---
@@ -35,7 +36,7 @@ width="60%" />
 .cls旁边的:hov就是当前选择元素的模拟操作，比如下图所示，鼠标悬浮"更多"字体上会浮现其他内容，那我要模拟鼠标悬浮这个操作，直接勾选":hover"就行
 
 <div align=center>
-<img src="https://github.com/jiulanrensan/blog/tree/master/chrome_developer_dev-tool/img/select_hover.gif" width="60%" />
+<img src="https://github.com/jiulanrensan/blog/blog/master/chrome_developer_dev-tool/img/select_hover.gif" width="60%" />
 </div>
 
 
@@ -43,7 +44,8 @@ width="60%" />
 ### 5. box-shadow的阴影不知道怎么写？
 
 <div align=center>
-<img src="https://github.com/jiulanrensan/blog/tree/master/chrome_developer_dev-tool/img/box_shadow.gif" width="60%" />
+<img src="https://github.com/jiulanrensan/blog/blog/master/chrome_developer_dev-tool/img/box_shadow.gif" width="60%" />
+</div>
 
 ---
 

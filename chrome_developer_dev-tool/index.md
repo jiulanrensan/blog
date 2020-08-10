@@ -10,7 +10,7 @@
 可以看到页面如下
 
 <div align=center>
-<img src="https://github.com/jiulanrensan/blog/tree/master/chrome_developer_dev-tool/img/screen.png" width="60%" />
+<img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/screen.png" width="60%" />
 </div>
 
 ---
