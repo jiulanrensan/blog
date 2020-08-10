@@ -9,7 +9,7 @@
 
 可以看到页面如下
 
-<div align="center" style="padding: 20px 0">
+<div style="padding: 20px 0;text-align: center;box-shadow: 2px 4px 5px 0px #00000030">
 <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/screen.png" width="60%" />
 </div>
 
