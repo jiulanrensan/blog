@@ -1,8 +1,5 @@
-问:
-
-我页面上某个html元素的样式不对劲，我该怎么去找这个元素样式呢？
-
-答:
+## element面板
+### 1. 我页面上某个html元素的样式不对劲，我该怎么去找这个元素样式呢？
 
 如图所示:
 ![面板截图](https://github.com/jiulanrensan/blog/blob/master/chrome%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7/img/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20200810154529.png)
@@ -11,9 +8,9 @@
 
 ---
 
-问： 调样式的时候经常会为px或者颜色数值等等修改，然后再回到浏览器查看，有点麻烦啊？
+### 2.   调样式的时候经常会为px或者颜色数值等等修改，然后再回到浏览器查看，有点麻烦啊？
 
-答： 相信你已经发现可以在element面板直接修改dom结构的tag标签，class名称等等，也可以在styles那直接输入样式，浏览器会及时展示，所以你可以在这里写好再复制过去
+相信你已经发现可以在element面板直接修改dom结构的tag标签，class名称等等，也可以在styles那直接输入样式，浏览器会及时展示，所以你可以在这里写好再复制过去
 
 ![编辑](https://github.com/jiulanrensan/blog/blob/master/chrome%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7/img/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20200810155955.png)
 
@@ -23,33 +20,22 @@
 
 ---
 
-问：
-
-一个元素盒子会有多个class，想查看某一个class效果？
-
-答：
+### 3.  一个元素盒子会有多个class，想查看某一个class效果？
 
 ![选取类名](https://github.com/jiulanrensan/blog/blob/master/chrome%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7/img/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20200810161828.png)
 
 点击1处的.cls，即当前选中元素的相关css，在2处展示，不勾选则表示不引用这个class
 
 ---
-问： 
 
-我有些元素hover情况下的样式怎么找不到？
-
-答： 
+### 4. 我有些元素hover情况下的样式怎么找不到？
 
 ![hover](https://github.com/jiulanrensan/blog/blob/master/chrome%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7/img/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20200810164237.png)
 
 .cls旁边的:hov就是当前选择元素的模拟操作，比如下图所示，鼠标悬浮"更多"字体上会浮现其他内容，那我要模拟鼠标悬浮这个操作，直接勾选":hover"就行
 
 ---
-问：
-
-box-shadow的阴影好难弄得好看？
-
-答：
+### 5. box-shadow的阴影好难弄得好看？
 
 阴影直接手动操作画出来
 
