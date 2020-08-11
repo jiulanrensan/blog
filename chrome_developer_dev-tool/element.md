@@ -4,7 +4,7 @@
 <br><br><br>
 <div align=center>
 <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/select_dom.gif" 
-width="60%" />
+width="70%" />
 </div>
 <br><br><br>
 
@@ -15,14 +15,14 @@ width="60%" />
 
 <br><br><br>
 <div align=center>
-<img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/edit.gif" width="60%" />
+<img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/edit.gif" width="70%" />
 </div>
 <br><br><br>
 
 ### 3.  一个元素盒子会有多个class，想查看某一个class效果？
 <br><br><br>
 <div align=center>
-<img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/select_cls.gif" width="60%" />
+<img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/select_cls.gif" width="70%" />
 </div>
 <br><br><br>
 
@@ -30,14 +30,14 @@ width="60%" />
 .cls旁边的:hov就是当前选择元素的模拟操作，比如下图所示，鼠标悬浮"更多"字体上会浮现其他内容，那我要模拟鼠标悬浮这个操作，直接勾选":hover"就行
 <br><br><br>
 <div align=center>
-<img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/select_hover.gif" width="60%" />
+<img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/select_hover.gif" width="70%" />
 </div>
 <br><br><br>
 
 ### 5. box-shadow的阴影不知道怎么写？
 <br><br><br>
 <div align=center>
-<img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/box_shadow.gif" width="60%" />
+<img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/box_shadow.gif" width="70%" />
 </div>
 <br><br><br>
 
