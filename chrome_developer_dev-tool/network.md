@@ -10,3 +10,8 @@
 ### 5. 这个timing包含了哪些信息
 
 ### 6. 为什么waterfall里的横条有些扎堆有些分得很开
+
+
+[上一章：console](https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/console.md)
+
+[下一章：network](https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/network.md)

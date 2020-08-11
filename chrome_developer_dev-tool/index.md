@@ -8,11 +8,12 @@
 * 使用 快捷键 Ctrl+Shift+I (Windows) 或 Cmd+Opt+I (Mac)
 
 可以看到页面如下
+
+<br><br><br>
 <div align="center">
   <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/screen.png" width="60%" />
 </div>
-
-<hr>
+<br><br><br>
 
 ### 2. 顶部的这些element,console等等分别有什么用，那几个最常用？
 
@@ -26,5 +27,10 @@
 
 剩下的我也不了解也没用过,上面的7项我会分七篇文章逐一讲解,目录如下
 
+<br>
+
 1. [element](https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/element.md)
 
+2. [console](https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/console.md)
+
+3. [network](https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/network.md)
