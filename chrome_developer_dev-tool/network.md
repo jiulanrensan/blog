@@ -25,15 +25,30 @@
 
 ### 怎么看低网速下的网页表现？我的网速太TM快了
 点击控制那一行的'online',可以选择模拟3g网络或者掉线状态，甚至可以自定义上传下载的网速
+<br><br><br>
+<div align="center">
+  <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/network_throttle.gif" width="70%" />
+</div>
+<br><br><br>
 
 ### 预览有两条不同颜色的竖线，这是什么？
 * 蓝色表示触发DOMContentLoaded，即初始html文档被完全加载和解析完成。[mdn: DOMContentLoaded](https://developer.mozilla.org/zh-CN/docs/Web/Events/DOMContentLoaded)
 * 红色表示页面完全加载。[mdn: load](https://developer.mozilla.org/zh-CN/docs/Web/Events/load)
 
+<br><br><br>
+<div align="center">
+  <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/load.PNG" width="70%" />
+</div>
+<br><br><br>
+
 ### 如何看看接口传的值对不对
 
 可以看到headers这个tab有请求头，响应头，最下面是query/params/body
-
+<br><br><br>
+<div align="center">
+  <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/network_headers.gif" width="70%" />
+</div>
+<br><br><br>
 
 ### headers旁边那些呢？
 * preview会展示有用的信息，比如图片，document等等
@@ -43,6 +58,12 @@
 * timing展示请求响应时间
 
 平时主要用的是这几个，重点是看timing，可以看到每个值都有不同颜色表示
+
+<br><br><br>
+<div align="center">
+  <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/timing.PNG" width="70%" />
+</div>
+<br><br><br>
 
 **重点**
 > [network-reference](https://developers.google.com/web/tools/chrome-devtools/network/reference)
