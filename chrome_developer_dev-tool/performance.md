@@ -48,12 +48,17 @@ network和cpu其实都是为了模拟手机效果
 
 2. CPU这一part记录期间表示CPU的使用情况，颜色与下面的summary对应
 
-
 <br><br><br>
 <div align="center">
   <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/cpu-summary.svg" width="70%" />
 </div>
 <br><br><br>
+
+### 找到性能瓶颈?
+1. 根据下面的summary的环状图，可以知道哪个过程耗费时间最长
+2. 展开main, 横坐标是记录期间的时间轴，纵坐标代表调用栈
+3. main的横条右上角如果有一个红色三角，就表示这个事件是有问题的
+4. 点击横条，下面的summary就会有这个事件的详细信息
 
 [上一章：source](https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/source.md)
 
