@@ -14,7 +14,9 @@
    * listeners: 侦听器
    * GPU Memory: GPU 内存细分
 
+[Chrome 浏览器垃圾回收机制与内存泄漏分析](https://juejin.im/post/6844903978069655565)
 
+[javascript典型内存泄漏及chrome的排查方法](https://zhuanlan.zhihu.com/p/26269860)
 
 [上一章：performance](https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/performance.md)
 
