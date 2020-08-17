@@ -3,3 +3,5 @@
 
 ## 目录
 [chrome开发者工具](https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/index.md)
+
+[浏览器缓存机制](https://github.com/jiulanrensan/blog/blob/master/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98.md)
