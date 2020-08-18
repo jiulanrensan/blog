@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+  text-align: center;
+  padding: 30px;
+}
+
+.container {
+  min-height: 380px;
+  margin-bottom: 20px;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/woman-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  /* 增加filter */
+  filter: blur(60px) saturate(120%) brightness(140%);
+  /* 开启硬件加速 */
+  /* transform: translateZ(0); */
+}
+
+.ball {
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/splogo.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
+}
+
+.ball-running {
+  animation: run-around 4s infinite;
+}
+
+@keyframes run-around {
+  0% {
+    top: 30px;
+    left: 30px;
+  }
+  
+  25% {
+    top: 30px;
+    left: 230px;
+  }
+  
+  50% {
+    top: 230px;
+    left: 230px;
+  }
+  
+  75% {
+    top: 230px;
+    left: 30px;
+  }
+}
+
+.toggleAnim {
+  height: 40px; 
+  width: 300px;
+  font-size: 2em;
+}
+
+.p {
+  font-size: 13px;
+  padding-top: 100px;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+  </div>
+  
+  <div class="ball"></div>
+  
+  <button class="toggleAnim">Start Animation</button>
+  
+  <script>
+    var toggleAnim = document.querySelector('.toggleAnim');
+    var ball = document.querySelector('.ball');
+
+    var animating = false;
+
+    toggleAnim.addEventListener('click', function(e) {
+      animating = !animating;
+      toggleAnim.textContent = animating ? 'Stop Animation' : 'Start Animation';
+      ball.className = animating ? 'ball ball-running' : 'ball';
+    });
+  </script>
+</body>
+</html>
