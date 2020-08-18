@@ -62,6 +62,14 @@ filter: blur(60px) saturate(120%) brightness(140%);
 transform: translateZ(0);
 ```
 
+
+### 使用gpu加速需要注意的
+#### Memory
+大部分重要的问题都会内存，GPU处理过多的内容会导致内存问题。因此不会对所有元素使用硬件加速
+
+#### Font Rendering
+在gpu渲染字体会导致抗锯齿无效，这是因为gpu和cpu算法不同，因此如果你不在动画结束的时候关闭硬件加速，会产生字体模糊
+
 > [参考文章](https://lz5z.com/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-CSS3%E7%A1%AC%E4%BB%B6%E5%8A%A0%E9%80%9F/)
 > [参考文章](https://juejin.im/post/6844903649974435854)
 > [参考文章](https://www.cnblogs.com/ranyonsue/p/8296983.html)
