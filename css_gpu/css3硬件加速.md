@@ -7,9 +7,25 @@
 把代码复制到本地打开然后开启chrome的performance面板记录
 
 ##### 1. 动画通过`top,left`移动
+> https://github.com/jiulanrensan/blog/blob/master/css_gpu/animation_left_top.html
+
+<br><br><br>
+<div align="center">
+  <img src="https://github.com/jiulanrensan/blog/blob/master/css_gpu/img/animation_left_top.png" width="70%" />
+</div>
+<br><br><br>
+
 * `Experience`： `Layout Shift`（布局偏移）全红，`summary`提示`Cumulative Layout Shifts can result in poor user experiences.`
 * `Main`： rendering（紫色部分）事件占据大部分时间，放大之后可以看到紫色部分包含`Recalculate Style`,`Layout`,`Update Layer Tree`事件
 ##### 2. 动画通过`transform: translate`移动
+> https://github.com/jiulanrensan/blog/blob/master/css_gpu/animation_transform.html
+
+<br><br><br>
+<div align="center">
+  <img src="https://github.com/jiulanrensan/blog/blob/master/css_gpu/img/animation_transform.png" width="70%" />
+</div>
+<br><br><br>
+
 * `Experience`：这一行已经没有了
 * `Main`: 可以看到紫色部分几乎只有在开头和末尾才出现
 
@@ -27,12 +43,22 @@
 ### chrome跟踪
 #### `Enable paint flashing`
 绿色的框会出现在重绘的区域。
+<br><br><br>
+<div align="center">
+  <img src="https://github.com/jiulanrensan/blog/blob/master/css_gpu/img/rendering_paint_flashing.gif" width="70%" />
+</div>
+<br><br><br>
 动图例子是`transform`，动画开始和动画结束小球区域都会出现绿色方框，表示这个区域重绘了，跟perfromance的main紫色部分对应
 如果动画是`left`定位，可以看到小球区域一直是绿色方框，这里就不放动图展示了
+
 #### `Layer borders`
 可以查看独立图层，开启这个选项以后单独的层会具有一个橙色的边框。
 动图例子是`transform`，动画过程中，小球区域一直有橙色边框，表示这是个独立图层
-
+<br><br><br>
+<div align="center">
+  <img src="https://github.com/jiulanrensan/blog/blob/master/css_gpu/img/rendering_layer_borders.gif" width="70%" />
+</div>
+<br><br><br>
 
 ### 在gpu渲染元素
 并不是所有css属性都会在gpu处理，除了下面的属性：
@@ -53,9 +79,13 @@
 ```
 这样做会让浏览器知道，我们希望采用3d的方式做转换，这会让浏览器最开始的时候就是用gpu处理，启动硬件加速
 
-例子：
+两个例子：
+> https://github.com/jiulanrensan/blog/blob/master/css_gpu/animation_transform_hack.html
+> https://github.com/jiulanrensan/blog/blob/master/css_gpu/animation_transform_hack_translateZ0.html
 
 ```
+// 动画位移都是用left,top
+// 主要不同点
 /* 增加filter */
 filter: blur(60px) saturate(120%) brightness(140%);
 /* 开启硬件加速 */
@@ -85,8 +115,21 @@ transform: translateZ(0);
 ```
 正常情况下，看不出performance有什么太大区别，于是把cpu调成`6 x slowdown`
 
+<br><br><br>
+<div align="center">
+  <img src="https://github.com/jiulanrensan/blog/blob/master/css_gpu/img/animation_transform_hack.png" width="70%" />
+</div>
+<br><br><br>
+上图没有添加 `transform: translateZ(0);`
 
+<br><br><br>
+<div align="center">
+  <img src="https://github.com/jiulanrensan/blog/blob/master/css_gpu/img/animation_transform_hack_translateZ0.png" width="70%" />
+</div>
+<br><br><br>
+上图添加 `transform: translateZ(0);`
 
+可以看到，开启硬件加速之后，`Experience`的红色部分(layout shift)减少，CPU部分`rendering`和`painting`明显降低
 
 
 ### 使用gpu加速需要注意的
