@@ -60,7 +60,33 @@
 filter: blur(60px) saturate(120%) brightness(140%);
 /* 开启硬件加速 */
 transform: translateZ(0);
+/* 动画都用left,top */
+@keyframes run-around {
+  0% {
+    top: 30px;
+    left: 30px;
+  }
+  
+  25% {
+    top: 30px;
+    left: 230px;
+  }
+  
+  50% {
+    top: 230px;
+    left: 230px;
+  }
+  
+  75% {
+    top: 230px;
+    left: 30px;
+  }
+}
 ```
+正常情况下，看不出performance有什么太大区别，于是把cpu调成`6 x slowdown`
+
+
+
 
 
 ### 使用gpu加速需要注意的
