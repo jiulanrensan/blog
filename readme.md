@@ -1,7 +1,16 @@
 ## 写博客的仓库
-整个博客都尽量以问答形式进行撰写，毕竟做笔记的目的就是为了知道如何用，有什么用
+
 
 ## 目录
+
+### chrome开发者工具/浏览器相关
 [chrome开发者工具](https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/index.md)
 
 [浏览器缓存机制](https://github.com/jiulanrensan/blog/blob/master/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98.md)
+
+[线程和进程](https://github.com/jiulanrensan/blog/blob/master/%E7%BA%BF%E7%A8%8B%E5%92%8C%E8%BF%9B%E7%A8%8B.md)
+
+[浏览器内核](https://github.com/jiulanrensan/blog/blob/master/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8.md)
+
+### css
+[硬件加速](https://github.com/jiulanrensan/blog/blob/master/css_gpu/css3%E7%A1%AC%E4%BB%B6%E5%8A%A0%E9%80%9F.md)
