@@ -11,18 +11,19 @@
       height: 100px;
     }
     div{
-      width: 100px;
-      flex-grow: 1;
+      width: 200px;
     }
     .left-side{
+      flex-shrink: 1;
       background-color: darkblue;
     }
-    .right-side{
-      background-color: darkcyan;
-    }
     .content {
+      flex-shrink: 2;
       background-color: aliceblue;
-      
+    }
+    .right-side{
+      flex-shrink: 3;
+      background-color: darkcyan;
     }
   </style>
 </head>

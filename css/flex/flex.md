@@ -64,10 +64,111 @@ flex: <'flex-grow'> <'flex-shrink'>? || <'flex-basis'>
 ### 如何计算`flex-grow`和`flex-shrink`
 #### `flex-grow`
 定义： `flex-grow`的值是个权重值，即容器有剩余空间的时候，会将剩余的空间按照`flex-grow`的权重来分配给各个项目
+```
+// html
+<section>
+  <div class="left-side"></div>
+  <div class="content"></div>
+  <div class="right-side"></div>
+</section>
+
+// css
+section {
+  display: flex;
+  width: 500px;
+  height: 100px;
+}
+div{
+  width: 100px;
+}
+.left-side{
+  flex-grow: 1;
+  background-color: darkblue;
+}
+.content {
+  flex-grow: 2;
+  background-color: aliceblue;
+}
+.right-side{
+  flex-grow: 3;
+  background-color: darkcyan;
+}
+```
+已知三个盒子总宽度为： 100+100+100 = 300px
+
+剩余空间： 500 - 300 = 200px
+
+三个盒子总权重： 1+2+3 = 6
+
+left盒子伸展： 1/6 * 200 = 33.33px
+
+content: 2/6 * 200 = 66.66px
+
+right: 3/6 * 200 = 100px
+
+最终长度：
+
+left: 100 + 33.33 = 133.33px
+
+content: 100 + 66.66 = 166.66px
+
+right: 100 + 100 = 200px
 
 
 ### `flex-shrink`
+定义： `flex-shrink`的值也是个权重值，所有子项目宽度总和大于容器宽度时，会按照`flex-shrink`的权重来定义收缩的大小
+```
+// html
+<section>
+  <div class="left-side"></div>
+  <div class="content"></div>
+  <div class="right-side"></div>
+</section>
 
+// css
+section {
+  display: flex;
+  width: 500px;
+  height: 100px;
+}
+div{
+  width: 200px;
+}
+.left-side{
+  flex-shrink: 1;
+  background-color: darkblue;
+}
+.content {
+  flex-shrink: 2;
+  background-color: aliceblue;
+}
+.right-side{
+  flex-shrink: 3;
+  background-color: darkcyan;
+}
+```
+三个盒子总宽度： 200*3 = 600px
+
+超出容器宽度：600 - 500 = 100px
+
+三个盒子总权重： 200 * 1 + 200 * 2 + 200 * 3 = 1200
+
+left盒子收缩： (200 * 1 / 1200) * 100 = 16.66px
+
+content： (200 * 2 / 1200) * 100 = 33.33px
+
+right: (200 * 3 / 1200) * 100 = 50px
+
+left盒子收缩：200 - 16.66 = 183.34px
+
+content: 200 - 33.33 = 166.67px
+
+right: 200 - 50 = 150px
+
+### flex动画
+https://github.com/jiulanrensan/blog/blob/master/css/flex/flex_animation.html
+
+> [详解 flex-grow 与 flex-shrink](https://zhuanlan.zhihu.com/p/24372279)
 
 > [实时flex布局](https://demos.scotch.io/visual-guide-to-css3-flexbox-flexbox-playground/demos/)
 
