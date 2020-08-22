@@ -14,8 +14,6 @@ ppi = 斜边 / 5.5 = 400.5
 ### px (css pixcels)
 虚拟像素，可以理解为“直觉”像素，CSS和JS使用的抽象单位，浏览器内的一切长度都是以CSS像素为单位的，CSS像素的单位是px
 
-在CSS规范中，长度单位可以分为两类，绝对单位以及相对单位。px是一个相对单位，相对的是设备像素(device pixel)
-
 默认情况下一个CSS像素应该是等于一个物理像素的宽度的，但是浏览器的放大操作让一个CSS像素等于了两个设备像素宽度。在高PPI的设备上，CSS像素甚至在默认状态下就相当于多个物理像素的尺寸。
 
 ### 设备独立像素/ device independent pixel(dip)
@@ -42,6 +40,23 @@ css像素 = 设备独立像素 = 逻辑像素
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 ```
 meta标签的作用是让当前viewport的宽度等于设备的宽度，同时不允许用户进行手动缩放，
+
+### css单位
+单位大体分为两类：
+* 绝对单位(不会因为其他元素的尺寸变化而变化)
+* 相对单位
+  * px 像素
+  * pt 1pt = 1/72 in
+  * in
+* 相对单位
+  * %
+  * em 相对父元素的字体大小
+  * rem 相对html标签的字体大小
+  * vw 1%视口宽度
+  * vh 1%视口高度
+  * vmin 1%视口的宽度和高度中较小的尺寸
+  * vmax 1%视口的宽度和高度中较大的尺寸
+#### pt
 
 
 > [CSS像素、物理像素、逻辑像素、设备像素比、PPI、Viewport](https://github.com/jawil/blog/issues/21)
