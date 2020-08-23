@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .p1 {font-size: 16px; line-height: 32px;}
+    .s1 {font-size: 2em;}
+    .s2 {font-size: 2em; line-height: 2em;}
+
+    .p2 {font-size: 16px; line-height: 2;}
+    .s5 {font-size: 2em;}
+    .s6 {font-size: 2em; line-height: 2em;}
+  </style>
+</head>
+<body>
+  <!-- em作为行高单位时，相对于自身字体大小 -->
+  <div class="p1">
+    <!-- font 16px; line 32px -->
+    <div class="s1">
+      1
+      <!-- font 32px; line 32px -->
+    </div>
+    <div class="s2">
+      1
+      <!-- font 32px; line 64px -->
+    </div>
+  </div>
+  <div class="p2">
+    <!-- font 16px; line 32px -->
+    <div class="s5">
+      1
+      <!-- s5的line-height继承的2，自身字体大小的两倍，而不是32px -->
+      <!-- font 32px; line: 64px -->
+    </div>
+    <div class="s6">
+      1
+      <!-- font 32px; line: 64px -->
+    </div>
+  </div>
+</body>
+</html>
