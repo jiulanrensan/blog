@@ -27,6 +27,6 @@ p {font-size: 2rem}
 
 > [rem布局](https://segmentfault.com/a/1190000012225828?utm_source=tag-newest)
 
-> [再聊移动端页面的适配](https://www.w3cplus.com/css/vw-for-layout.html)
-
 > [移动端web适配](https://segmentfault.com/a/1190000008767416)
+
+> [px2rem,px2vw原理](https://segmentfault.com/a/1190000015619303)
