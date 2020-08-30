@@ -2,6 +2,12 @@
 
 
 ## 目录
+Uint8Array是什么
+ArrayBuffer
+FormData对象
+base64
+Data URLs
+FileReader 
 [mdn web api接口参考](https://developer.mozilla.org/zh-CN/docs/Web/API)
 
 ### chrome开发者工具/浏览器相关

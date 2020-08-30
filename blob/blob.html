@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 从字符串创建 Blob
+    // let myBlobParts = ['<html><h2>Hello Semlinker</h2></html>']; // an array consisting of a single DOMString
+    // let myBlob = new Blob(myBlobParts, {type : 'text/html', endings: "transparent"}); // the blob
+    // console.log(myBlob);
+    
+    // console.log(myBlob.size + " bytes size");
+    // Output: 37 bytes size
+    // console.log(myBlob.type + " is the type");
+    // Output: text/html is the type
+
+
+    // 从类型化数组和字符串创建 Blob
+    let hello = new Uint8Array([72, 101, 108, 108, 111]); // 二进制格式的 "hello"
+    let blob = new Blob([hello, ' ', 'semlinker'], {type: 'text/plain'});
+    console.log(blob);
+    
+  </script>
+</body>
+</html>

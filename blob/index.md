@@ -30,4 +30,32 @@ var blob = new Blob(blobParts, options)
 
 Blob 对象是不可改变的。我们不能直接在一个 Blob 中更改数据，但是我们可以对一个 Blob 进行分割,创建新的Blob对象，再将他们混合到一个新的Blob中
 
+
+### Blob URL / Object URL
+Blob URL / Object URL是一种伪协议，允许Blob和File对象用作图像，下载二进制数据链接等的URL源。在浏览器中，我们使用`URL.createObjectURL`方法来创建Blob URL,该方法接收一个Blob对象，并为其创建一个唯一的的URL，形式为`blob:<origin>/<uuid>`
+
+浏览器内部为每个通过`URL.createObjectURL`生成的URL存储了一个URL -> Blob映射，因此，此类URL较短，但可以访问blob。生成的url只有在当前文档打开的状态下才有效。它允许引用`img,a`标签中的blob，但如果你访问的Blob URL不存在，浏览器会报404错误
+
+上述的Blob URL 看似不错，但实际上有副作用，虽然存储了URL -> Blob的映射，但blob本身仍驻留在内存中，浏览器无法释放它。映射在文档卸载时清除，因此blob内存此时才释放
+
+但如果应用程序生命周期很长，我们可以调用`URL.revokeObjectURL(url)`方法，从内部映射中删除引用，从而删除blob,释放了缓存
+
+### Blob 转换为 Base64
+代替`URL.createObjectURL`的替代方法是，将blob转换为base64编码的字符串。base64是一种基于64个可打印字符来表示二进制数据的表示方法，它常用于在处理文本数据的场合，表示、传输、存储一些二进制数据。
+64个字符：大小写字母各26个，数字10个，加号+，斜杠/
+
+绝大多数浏览器都支持一种名为`Data URLs`的特性，允许使用base64对图片或者其他文件的二进制数据进行编码，将其作为文本字符串嵌入网页中。
+
+Data URLs由四个部分组成：
+* 前缀 `data:`
+* 代表数据类型的MIME类型
+* 如果非文本则为可选的 base64 标记
+* 数据本身
+
+`data:[<mediatype>][;base64],<data>`
+
+mediatype 是个 MIME 类型的字符串, 例如`image/jpeg`表示jpeg图像文件。如果被省略，则默认值为 `text/plain;charset=US-ASCII`。如果是二进制数据，你可以将数据进行 base64 编码之后再进行嵌入。比如嵌入一张图片：`<img alt="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUg...">`
+
+但需要注意的是：如果图片较大，图片的色彩层次比较丰富，则不适合使用这种方式，因为该图片经过 base64 编码后的字符串非常大，会明显增大 HTML 页面的大小，从而影响加载速度。除此之外，利用 FileReader API，我们也可以方便的实现图片本地预览功能
+
 > [blob](https://mp.weixin.qq.com/s?__biz=MzAxODE2MjM1MA==&mid=2651559280&idx=1&sn=bc71c7e518169fc315575b2c3ec22060&chksm=802542b1b752cba7e4cc6adbd9d8d9537e946df4f45c03f693197bb9c686aabb3bf228df9d9c&mpshare=1&scene=1&srcid=0828J1jscJH1O6s1KQ7BR8dO&sharer_sharetime=1598624260086&sharer_shareid=8c794445c738f5fb7a84aa99cb3a295e&key=e898af26a858d804d0b88c20cbbdc7c2e03a25451182a625084b39aa8e653b34bd649c5cff4962eeecd2d273a99c802b1b1b3e4cc6b08df51bc6445f67613b59ac118a4ef4c7cd57ea6ad4dfcf5ac1b294958b26e7f61d63d960ba637ca7fa70138501a7b854c328343987079155b0d660f1ece20d037af25f1facdefb2a26e7&ascene=1&uin=MTY0NTAyNjcyMw%3D%3D&devicetype=Windows+10+x64&version=62090538&lang=zh_CN&exportkey=AYuTBIAdrMh63zzdyBiPdZk%3D&pass_ticket=y8Azt6v0Nrwj7A2EktMD9nv9g51GIQeFr1XWlVMh%2F6%2BgNcJy97xJbD%2BlZhqqbdR0)
