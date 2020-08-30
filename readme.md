@@ -3,11 +3,23 @@
 
 ## 目录
 Uint8Array是什么
+
 ArrayBuffer
+
 FormData对象
+
 base64
+
 Data URLs
+
 FileReader 
+
+[文件和二进制数据操作](https://javascript.ruanyifeng.com/htmlapi/file.html#)
+
+[压缩图片](https://juejin.im/post/6844903510929063943)
+
+[理解DOMString、Document、FormData、Blob、File、ArrayBuffer数据类型](zhangxinxu.com/wordpress/2013/10/understand-domstring-document-formdata-blob-file-arraybuffer/)
+
 [mdn web api接口参考](https://developer.mozilla.org/zh-CN/docs/Web/API)
 
 ### chrome开发者工具/浏览器相关
