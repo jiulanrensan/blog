@@ -45,15 +45,6 @@ Blob URL / Object URL是一种伪协议，允许Blob和File对象用作图像，
 
 绝大多数浏览器都支持一种名为`Data URLs`的特性，允许使用base64对图片或者其他文件的二进制数据进行编码，将其作为文本字符串嵌入网页中。
 
-Data URLs由四个部分组成：
-* 前缀 `data:`
-* 代表数据类型的MIME类型
-* 如果非文本则为可选的 base64 标记
-* 数据本身
-
-`data:[<mediatype>][;base64],<data>`
-
-mediatype 是个 MIME 类型的字符串, 例如`image/jpeg`表示jpeg图像文件。如果被省略，则默认值为 `text/plain;charset=US-ASCII`。如果是二进制数据，你可以将数据进行 base64 编码之后再进行嵌入。比如嵌入一张图片：`<img alt="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUg...">`
 
 但需要注意的是：如果图片较大，图片的色彩层次比较丰富，则不适合使用这种方式，因为该图片经过 base64 编码后的字符串非常大，会明显增大 HTML 页面的大小，从而影响加载速度。除此之外，利用 FileReader API，我们也可以方便的实现图片本地预览功能
 
