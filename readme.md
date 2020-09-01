@@ -32,5 +32,8 @@
 * arrayBuffer
 * URL/Data URLs
 * base64
+* ArrayBuffer 与 TypedArray
 * FormData对象
 * Uint8Array
+
+### xhr,请求头content-type
