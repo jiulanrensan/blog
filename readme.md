@@ -35,5 +35,6 @@
 * ArrayBuffer 与 TypedArray
 * FormData对象
 * Uint8Array
+* fileReader
 
 ### xhr,请求头content-type
