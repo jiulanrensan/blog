@@ -1,14 +1,13 @@
 ## 写博客的仓库
+## 电子书下载网站
+[https://b-ok.global/]()
 
+[https://ebook2.lorefree.com/#]()
 
 ## 目录
 [javascript参考教程](https://javascript.ruanyifeng.com/)
 
-[文件和二进制数据操作](https://javascript.ruanyifeng.com/htmlapi/file.html#)
-
 [压缩图片](https://juejin.im/post/6844903510929063943)
-
-[理解DOMString、Document、FormData、Blob、File、ArrayBuffer数据类型](zhangxinxu.com/wordpress/2013/10/understand-domstring-document-formdata-blob-file-arraybuffer/)
 
 [mdn web api接口参考](https://developer.mozilla.org/zh-CN/docs/Web/API)
 
