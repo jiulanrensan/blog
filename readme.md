@@ -7,8 +7,6 @@
 ## 目录
 [javascript参考教程](https://javascript.ruanyifeng.com/)
 
-[压缩图片](https://juejin.im/post/6844903510929063943)
-
 [mdn web api接口参考](https://developer.mozilla.org/zh-CN/docs/Web/API)
 
 ### chrome开发者工具/浏览器相关
@@ -37,3 +35,6 @@
 * fileReader
 
 ### xhr,请求头content-type
+
+### cors
+https://harttle.land/2016/12/28/cors-with-cookie.html
