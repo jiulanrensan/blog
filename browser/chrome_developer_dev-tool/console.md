@@ -3,7 +3,7 @@
 js代码中的警告、报错、信息，或者网络请求的报错都会在这打印出来，可以分类筛选查看，觉得碍事直接清空掉
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/console_filter_and_clear.gif" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/console_filter_and_clear.gif" width="70%" />
 </div>
 <br><br><br>
 
@@ -11,14 +11,14 @@ js代码中的警告、报错、信息，或者网络请求的报错都会在这
 选择'preserve log'可以保留
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/console_preserve_log.gif" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/console_preserve_log.gif" width="70%" />
 </div>
 <br><br><br>
 
 ### 3. 写了一段函数，想测试下结果是否符合预期？
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/console_live_expression.gif" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/console_live_expression.gif" width="70%" />
 </div>
 <br><br><br>
 

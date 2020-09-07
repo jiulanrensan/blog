@@ -2,6 +2,11 @@
 理解前端压缩图片原理，应该先了解js的Blob,dataURL,FileReader等知识
 
 <!-- 图片：各个格式之间的转换 -->
+<br><br><br>
+<div align="center">
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/transform.png" width="70%" />
+</div>
+<br><br><br>
 
 ### 原理
 前端压缩图片的原理其实就是用canvas的`drawIamge()`进行图像处理

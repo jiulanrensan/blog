@@ -12,7 +12,7 @@
 
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/panes.png" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/panes.png" width="70%" />
 </div>
 <br><br><br>
 
@@ -27,7 +27,7 @@
 点击控制那一行的'online',可以选择模拟3g网络或者掉线状态，甚至可以自定义上传下载的网速
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/network_throttle.gif" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/network_throttle.gif" width="70%" />
 </div>
 <br><br><br>
 
@@ -37,7 +37,7 @@
 
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/load.PNG" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/load.PNG" width="70%" />
 </div>
 <br><br><br>
 
@@ -46,7 +46,7 @@
 可以看到headers这个tab有请求头，响应头，最下面是query/params/body
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/network_headers.gif" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/network_headers.gif" width="70%" />
 </div>
 <br><br><br>
 
@@ -61,7 +61,7 @@
 
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/timing.PNG" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/timing.PNG" width="70%" />
 </div>
 <br><br><br>
 

@@ -2,7 +2,7 @@
 ### performance没展开讲的memory,这里展开讲一下
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/performance_memory_2.png" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/performance_memory_2.png" width="70%" />
 </div>
 <br><br><br>
 

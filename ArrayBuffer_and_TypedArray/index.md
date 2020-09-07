@@ -27,7 +27,7 @@ Uint16Array | 2 | 16位无符号整数
 ### 例子
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/ArrayBuffer_and_TypedArray/typedArray.png" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/typedArray.png" width="70%" />
 </div>
 <br><br><br>
 

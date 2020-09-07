@@ -11,7 +11,7 @@
 
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/css_gpu/img/animation_left_top.png" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/animation_left_top.png" width="70%" />
 </div>
 <br><br><br>
 
@@ -22,7 +22,7 @@
 
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/css_gpu/img/animation_transform.png" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/animation_transform.png" width="70%" />
 </div>
 <br><br><br>
 
@@ -45,7 +45,7 @@
 绿色的框会出现在重绘的区域。
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/css_gpu/img/rendering_paint_flashing.gif" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/rendering_paint_flashing.gif" width="70%" />
 </div>
 <br><br><br>
 动图例子是`transform`，动画开始和动画结束小球区域都会出现绿色方框，表示这个区域重绘了，跟perfromance的main紫色部分对应
@@ -56,7 +56,7 @@
 动图例子是`transform`，动画过程中，小球区域一直有橙色边框，表示这是个独立图层
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/css_gpu/img/rendering_layer_borders.gif" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/rendering_layer_borders.gif" width="70%" />
 </div>
 <br><br><br>
 
@@ -117,14 +117,14 @@ transform: translateZ(0);
 
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/css_gpu/img/animation_transform_hack.png" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/animation_transform_hack.png" width="70%" />
 </div>
 <br><br><br>
 上图没有添加 `transform: translateZ(0);`
 
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/css_gpu/img/animation_transform_hack_translateZ0.png" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/animation_transform_hack_translateZ0.png" width="70%" />
 </div>
 <br><br><br>
 上图添加 `transform: translateZ(0);`

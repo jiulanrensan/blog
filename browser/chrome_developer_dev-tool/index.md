@@ -11,7 +11,7 @@
 
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/screen.png" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/screen.png" width="70%" />
 </div>
 <br><br><br>
 

@@ -7,14 +7,14 @@
 看图说话
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/performance_record.gif" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/performance_record.gif" width="70%" />
 </div>
 <br><br><br>
 
 ### 卧槽，怎么这么复杂，从上往下说具体点？
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/performance_feature.png" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/performance_feature.png" width="70%" />
 </div>
 <br><br><br>
 
@@ -26,7 +26,7 @@
 ### 第一块再详细点？比如screenshots和memory
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/performance_controls.png" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/performance_controls.png" width="70%" />
 </div>
 <br><br><br>
 
@@ -35,7 +35,7 @@
 
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/performance_memory.png" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/performance_memory.png" width="70%" />
 </div>
 <br><br><br>
 
@@ -47,7 +47,7 @@
 7. Enable advanced paint instrumentation 记录渲染事件的细节，点击frames其中一项，下方4区域就多了一个layer
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/performance_instrumentation.gif" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/performance_instrumentation.gif" width="70%" />
 </div>
 <br><br><br>
 
@@ -57,7 +57,7 @@
 
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/performance_overview.png" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/performance_overview.png" width="70%" />
 </div>
 <br><br><br>
 
@@ -71,7 +71,7 @@
 
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/cpu-summary.svg" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/cpu-summary.svg" width="70%" />
 </div>
 <br><br><br>
 
@@ -79,7 +79,7 @@
 ### 区域3 
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/performance_area3.png" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/performance_area3.png" width="70%" />
 </div>
 <br><br><br>
 
@@ -94,14 +94,14 @@
 点击`www.baidu.com`如图a
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/performance_network.png" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/performance_network.png" width="70%" />
 </div>
 <br><br><br>
 
 附上一张network的timing图配合食用：图b
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/network_timing.png" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/network_timing.png" width="70%" />
 </div>
 <br><br><br>
 
@@ -115,7 +115,7 @@
 #### 2. frames 帧线程，点击绿色长方形可以看到fps
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/performance_frames.png" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/performance_frames.png" width="70%" />
 </div>
 <br><br><br>
 
@@ -140,7 +140,7 @@
 ##### 5.2
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/chrome_developer_dev-tool/img/performance_event.png" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/performance_event.png" width="70%" />
 </div>
 <br><br><br>
 

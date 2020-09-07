@@ -10,28 +10,28 @@ base64是一种基于64个可打印字符来表示二进制数据的表示方法
 
 <br><br><br>
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/base64/base_define.png" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/base_define.png.png" width="70%" />
 </div>
 <br><br><br>
 
 #### 编码过程
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/base64/base64_index.png" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/base64_index.png" width="70%" />
 </div>
 <br><br><br>
 
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/base64/base_tranform.png" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/base_tranform.png" width="70%" />
 </div>
 <br><br><br>
 
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/base64/base_transform_2.png" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/base_transform_2.png" width="70%" />
 </div>
 <br><br><br>
 
 <div align="center">
-  <img src="https://github.com/jiulanrensan/blog/blob/master/base64/base_transform_3.png" width="70%" />
+  <img src="https://github.com/jiulanrensan/blog/blob/master/img/base_transform_3.png" width="70%" />
 </div>
 <br><br><br>
 
