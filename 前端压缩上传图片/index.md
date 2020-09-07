@@ -1,24 +1,62 @@
 ## 前端压缩上传图片
 理解前端压缩图片原理，应该先了解js的Blob,dataURL,FileReader等知识
 
-<!-- 图片：各个格式之间的转换 -->
+### 前文
+下图是各种数据对象之间的转换
 <br><br><br>
 <div align="center">
   <img src="https://github.com/jiulanrensan/blog/blob/master/img/transform.png" width="70%" />
 </div>
 <br><br><br>
 
+* 1. File to Image Object
+  > [url](https://github.com/jiulanrensan/blog/blob/master/url/index.md#object-url)
+
+  通过`URL.createObjectURL`创建Object Url，然后赋值给image.src
+
+* 2. Image Url to Image Object
+创建image对象然后赋值src
+
+* 3. Image Object to canvas
+canvas的`drawImage`
+
+* 4. canvas to blob 
+见下方canvas.toBlob(callback, type, encoderOptions)
+
+* 5. canvas to dataURL
+见下方canvas.toDataURL(type, encoderOptions)
+
+* 6. blob to dataURL
+    > [base64](https://github.com/jiulanrensan/blog/blob/master/base64/index.md)
+    
+    `atob()`
+* 7. dataURL to Blob
+    > [toblob](https://github.com/jiulanrensan/blog/blob/master/base64/index.md#base64-to-blob)
+`btoa()`
+* 8. file to dataURL
+FileReader.readAsDataURL()
+> [fileReader](https://github.com/jiulanrensan/blog/blob/master/FileReader/index.md)
+
+* 9. dataURL to imageObject
+创建image对象然后赋值src
+
 ### 原理
-前端压缩图片的原理其实就是用canvas的`drawIamge()`进行图像处理
+前端压缩图片的原理其实就是用canvas的`drawIamge()`进行图像处理，然后根据质量参数输出不同大小的图像文件
 
 #### drawIamge()
 > [语法](https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/drawImage)
 
+#### canvas.toDataURL(type, encoderOptions);
+> [语法](https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLCanvasElement/toDataURL)
+
+#### canvas.toBlob(callback, type, encoderOptions)
+> [语法](https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLCanvasElement/toBlob)
+
 不建议通过修改canvas画布大小去压缩图像，因为有时候画布变小了，转成图片却变大了。
-我自己试了很多图片，某些图片画布大小为原来的0.6-0.8倍尺寸时，转成图片会比原图变大
+我自己试了很多图片，某些图片画布大小为原来的0.6倍尺寸及以上时，转成图片会比原图变大
 
 
-### 涉及不同对象之间的转换
+### 开始
 首先，一般浏览器图片来源有两个：
 * 1. `<input>`标签上传文件
 * 2. 通过http获取图片链接
@@ -87,10 +125,10 @@ function imageToCanvas (image) {
   // 宽高比
   const whRatio = naturalWidth/naturalHeight
   // 设定画布宽高
-  canvas.width = 300
-  canvas.height = 300/whRatio
+  canvas.width = naturalWidth
+  canvas.height = naturalHeight
   // 画到画布上
-  ctx.drawImage(image, 0, 0, 300, 300/whRatio)
+  ctx.drawImage(image, 0, 0, canvas.width, canvas.height)
   // 转为blob格式
   canvasToBlob(canvas)
   // 转为dataURL
@@ -108,7 +146,7 @@ canvas.toDataURL(mimeType, qualityArgument)
 ```
 mimeType表示canvas导出来的base64图片的类型，默认是png格式
 
-qualityArgument表示导出的图片质量，只要导出为jpg和webp格式的时候此参数才有效果，默认值是0.92，是一个比较合理的图片质量输出参数，通常情况下，我们无需再设定
+qualityArgument表示导出的图片质量，只要导出为jpg和webp格式的时候此参数才有效果，默认值是0.92
 ```
 function canvasToBlob (canvas) {
   canvas.toBlob((blob) => {
@@ -137,4 +175,3 @@ image.onload = () => {
 ### 参考
 > [压缩图片](https://juejin.im/post/6844903510929063943)
 > [压缩图片](https://segmentfault.com/a/1190000023486410)
-> [压缩图片](https://www.zhangxinxu.com/wordpress/2017/07/html5-canvas-image-compress-upload/)
