@@ -26,6 +26,8 @@
 13. pm2
 
 14. mysql
+主键外键索引二级索引
+https://zhuanlan.zhihu.com/p/29118331
 
 15. mongodb
 
@@ -54,11 +56,13 @@ https://zhuanlan.zhihu.com/p/34943332
 
 24. http,tcp极客课程，content-type
 
-25. **vue源码** https://vue-js.com/learn-vue/start/#_1-%E5%89%8D%E8%A8%80
+25. **vue源码** https://vue-js.com/learn-vue/start/
+
 
 26. cors
 
-27. xss
+27. xss，csrf
+https://segmentfault.com/a/1190000006944760
 
 28. 图片类型以及兼容，webp
 
@@ -68,8 +72,14 @@ https://zhuanlan.zhihu.com/p/34943332
 
 31. js浮点数精度问题，计算机组成原理（浮点数）
 
+32. [数据结构和算法](https://labuladong.gitbook.io/algo/)
+
+33. [c语言学习](https://www.lanqiao.cn/courses/57)
+
 ## 要做的项目
 1. 写一套自己的脚手架
+1.1 写一个cli插件，如生成文件，git命令
+1.2 npm-script bash命令
 
 3. 写一套自己的pc组件
 
