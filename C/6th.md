@@ -25,3 +25,91 @@ int a[3][4] = {1,2,3,4,5,6,7,8,9,10,11,12};
 ```
 
 ### 字符数组
+字符型数据是以字符的 ASCII 代码存储在存储单元中的，一般占一个字节。由于 ASCII 代码属于整数形式，因此，把字符型归纳为整数类型中的一种
+
+C 语言中没有字符串类型，字符串都是存储在字符型数组中的
+
+```
+char c[10]={'I',' ','a','m',' ','h','a','p','p','y'};
+
+char c[]={'I',' ','a','m',' ','h','a','p','p','y'};
+
+char[] = {"I love shiyanlou"};
+
+// 此时字符串常量后面多了一个\0
+char[] = "I love shiyanlou";
+```
+
+`puts(字符数组)`其作用是将一个字符串输出到终端
+
+`gets(字符数组)`其作用是从终端输入一个字符串到字符数组，并且得到一个函数值
+```
+#include<stdio.h>
+#include<string.h> //在使用字符串处理函数时，在程序文件的开头用 #include<string.h>
+int main(){
+   char str[] = "China\nChengdu";
+
+   puts(str);
+   printf("Enter a new string:");
+   gets(str);    //有的编译器会报 warning，提示 gets() 函数不安全；
+                   //这里说明一下，这个warning是编译器针对这个函数的，不影响实验。感兴趣的同学可以作为课后自学。
+   puts(str);
+
+   return 0;
+}
+```
+
+#### `strcat`字符串连接函数
+```
+#include<stdio.h>
+#include<string.h> //在使用字符串处理函数时，在程序文件的开头用 #include<string.h>
+int main(){
+   char str1[30] = "People's Republic of'";
+   char str2[] = "China";
+
+   printf("%s",strcat(str1,str2));
+
+   return 0;
+}
+```
+> 连接前两个字符串后面都有 '\0'，连接时将字符串 1 后面的 '\0' 取消，只在新串后面保留 '\0'
+
+> 字符串 1 必须足够大，以便于容纳字符串 2。如果在定义是定义为 char str1[]="People's Republic of"; 就会出现问题，因为长度不够
+
+#### `strlen`字符串长度函数
+```
+char str[] = "China";
+printf("%d",strlen(str));
+```
+> 注意：strlen() 返回的值比实际占用的长度要小，因为不包含 '\0'
+
+#### `strcpy` 字符串复制函数
+```
+char str1[10],str2[] = "China";
+strcpy(str1,str2);
+```
+
+> 不能用赋值语句将一个字符串常量直接给一个字符数组
+```
+str1 = "shiyanlou";      //错误，企图用赋值语句将一个字符串常量直接赋值给一个数组
+str1 = str2;              //错误，企图用赋值语句将一个字符数组直接赋给另一个字符数组
+```
+
+#### `strcmp` 字符串比较函数
+作用是比较字符串 1 和字符串 2
+```
+strcmp(str1,str2);
+strcmp("Chengdu","Beijing");
+```
+比较规则：
+将两个字符串自左向右逐个字符比较（按照 ASCII 码值大小比较），直到出现不同的字符或者遇到 '\0 '为止
+
+如果全部字符相同，则认为两个字符串相同
+
+若出现不同的字符，则以第 1 对不相同的字符的比较结果为准。例如："A"<"D"，"e">"E"，"these">"that"，"computer">"compare"
+
+返回值：
+字符串 1=字符串 2，则函数值为 0
+字符串 1>字符串 2，则函数值为一个正整数
+字符串 1<字符串 2，则函数值为一个负整数
+
