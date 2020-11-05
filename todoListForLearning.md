@@ -74,7 +74,19 @@ https://segmentfault.com/a/1190000006944760
 
 32. [数据结构和算法](https://labuladong.gitbook.io/algo/)
 
-33. [c语言学习](https://www.lanqiao.cn/courses/57)
+33. 首屏加载速度优化
+https://zhuanlan.zhihu.com/p/56121620
+https://juejin.im/post/6844903613790175240
+
+34. 多页通信
+
+35. 滚动穿透，点击穿透
+
+35. webpack 多模块打包
+
+36. dns
+
+37. encodeURIComponent
 
 ## 要做的项目
 1. 写一套自己的脚手架
@@ -87,3 +99,7 @@ https://segmentfault.com/a/1190000006944760
 
 5. react做个小项目
 
+6. [搭建一个属于自己的在线 IDE](https://github.com/mcuking/blog/issues/86)
+
+## 面经
+1. 腾讯 https://zhuanlan.zhihu.com/p/265147335?utm_source=wechat_session&utm_medium=social&utm_oi=682211543370960896
