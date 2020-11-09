@@ -86,7 +86,9 @@ https://juejin.im/post/6844903613790175240
 
 36. dns
 
-37. encodeURIComponent
+37. ~~encodeURIComponent~~
+
+38. [ast](https://segmentfault.com/a/1190000016231512)
 
 ## 要做的项目
 1. 写一套自己的脚手架
