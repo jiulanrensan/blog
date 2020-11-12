@@ -12,7 +12,6 @@ hash只与文件内容有关，即每个文件的hash都不同
 
 
 ## filename,chunkFilename
-[filename 和 chunkFilename 的区别是什么？](https://www.cnblogs.com/skychx/p/webpack-filename-chunkFilename.html)
 
 一句话：
 * filename 指列在 entry 中，打包后输出的文件的名称
@@ -55,3 +54,44 @@ chunkFilename没有指定，所以就将`filename`的`[name]`替换成当前chun
     }
 }
 ```
+
+## path,publicPath
+[参考](https://juejin.im/post/6844903601060446221)
+### path
+对应一条绝对路径，输出在这条路径下
+```
+output: {
+	path: path.resolve(__dirname, '../dist'),
+}
+
+```
+### publicPath
+为项目中的所有资源指定一个基础路径,这里说的所有资源的基础路径是指项目中引用css，js，img等资源时候的一个基础路径,这个基础路径要配合具体资源中指定的路径使用，所以其实打包后资源的访问路径可以用如下公式表示
+```
+静态资源最终访问路径 = output.publicPath + 资源loader或插件等配置路径
+// 例如
+output.publicPath = '/dist/'
+
+// image
+options: {
+ 	name: 'img/[name].[ext]?[hash]'
+}
+// 最终图片的访问路径为
+output.publicPath + 'img/[name].[ext]?[hash]' = '/dist/img/[name].[ext]?[hash]'
+
+// js output.filename
+output: {
+	filename: '[name].js'
+}
+// 最终js的访问路径为
+output.publicPath + '[name].js' = '/dist/[name].js'
+
+// extract-text-webpack-plugin css
+new ExtractTextPlugin({
+	filename: 'style.[chunkhash].css'
+})
+// 最终css的访问路径为
+output.publicPath + 'style.[chunkhash].css' = '/dist/style.[chunkhash].css'
+```
+
+如果部署到cdn上，则需要相关设置相关cdn的url，[参考官网](https://webpack.js.org/configuration/output/#outputpublicpath)
