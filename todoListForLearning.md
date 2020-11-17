@@ -90,6 +90,8 @@ https://juejin.im/post/6844903613790175240
 
 38. [ast](https://segmentfault.com/a/1190000016231512)
 
+39. prototype
+
 ## 要做的项目
 1. 写一套自己的脚手架
 1.1 写一个cli插件，如生成文件，git命令
