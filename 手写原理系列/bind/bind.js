@@ -8,6 +8,10 @@
 
 // es6
 Function.prototype.bind1 = function (obj, ...args1) {
+  // 调用bind的必须是函数
+  if (typeof this !== "function") {
+    throw new Error("Function.prototype.bind - what is trying to be bound is not callable");
+  }
   const fn = this
   // 生成函数之后的赋值
   return function (...args2) {
@@ -31,17 +35,66 @@ Function.prototype.bind2 = function (obj) {
 // 一个绑定函数也能使用new操作符创建对象：这种行为就像把原函数当成构造器。
 // 提供的 this 值被忽略，同时调用时的参数被提供给模拟函数
 Function.prototype.bind3 = function (obj) {
+  var fn = this
+  var args1 = Array.prototype.slice.call(arguments, 1)
   
+  var fnBind = function () {
+    var bindArgs = Array.prototype.slice.call(arguments)
+    // 如果作为构造函数，使用new操作，使fn指向this即指向生成的实例
+    // 则 this instanceof fnBind === true 
+    // 如果是普通函数，this指向obj就行
+    // console.log('this instanceof fnBind', this instanceof fnBind);
+    // console.log(fn.prototype);
+    return fn.apply(this instanceof fnBind ? this : obj, args1.concat(bindArgs))
+  }
+  // 如果是普通函数调用，this是指向调用bind函数的，可以访问到其原型，fnBind.prototype = fn.prototype这一步是多此一举
+  // 但如果是构造函数，this指向了生成的实例，就无法访问调用bind的函数的原型了，所以需要赋值
+  fnBind.prototype = fn.prototype
+  return fnBind
 }
 
 // test
-const obj = {
-  x: 42,
-  getX: function(...args) {
-    console.log('args', ...args);
-    return this.x;
-  }
+// const obj = {
+//   x: 42,
+//   getX: function(...args) {
+//     console.log('args', ...args);
+//     return this.x;
+//   },
+//   getName: function () {
+//     return this.name
+//   }
+// }
+// obj.__proto__.name = 'mike'
+// // const unboundGetX = obj.getX;
+// const unboundGetName = obj.getName;
+// // const boundGetX  = unboundGetX.bind3(obj, 1,2,3)
+// const boundGetName = unboundGetName.bind3(obj)
+// // console.log('boundGetX', boundGetX());
+// console.log('boundGetX', boundGetName());
+
+// const newFn = new boundGetName()
+// console.log(newFn);
+
+
+// test2
+var value = 2;
+var foo = {
+  value: 1
+};
+
+function bar(name, age) {
+  this.habit = 'shopping';
+  console.log('this.value', this.value);
+  console.log('name',name);
+  console.log('age', age);
+  console.log('friend', this.friend);
 }
-const unboundGetX = obj.getX;
-const boundGetX  = unboundGetX.bind2(obj, 1,2,3)
-console.log('boundGetX', boundGetX());
+// foo.__proto__.friend = 'kebin'
+bar.prototype.friend = 'kevin';
+var bindFoo = bar.bind3(foo, 'daisy');
+// console.log(bindFoo('18'));
+var obj = new bindFoo('18');
+console.log(obj.habit);
+// fnBind.prototype = fn.prototype
+// 如果不赋值，访问不到原型
+console.log(obj.friend);
