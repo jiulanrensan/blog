@@ -28,11 +28,19 @@ Otaku.prototype.sayYourName = function () {
     console.log('I am ' + this.name);
 }
 
-var person = new Otaku('Kevin', '18');
+// var person = new Otaku('Kevin', '18');
 // var person = simulateNew(Otaku, 'Kevin', '18')
-console.log(person);
-console.log(person.name) // Kevin
-console.log(person.habit) // Games
-console.log(person.strength) // 60
+// console.log(person);
+// console.log(person.name) // Kevin
+// console.log(person.habit) // Games
+// console.log(person.strength) // 60
 
-person.sayYourName(); // I am Kevin
+// person.sayYourName(); // I am Kevin
+
+
+// 原型链
+var fn = function () {}
+var finalFn = function() {}
+fn.prototype = Otaku.prototype
+finalFn.prototype = new fn()
+console.log(finalFn.strength);
