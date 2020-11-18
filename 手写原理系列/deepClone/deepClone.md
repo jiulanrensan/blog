@@ -1,4 +1,5 @@
 # 深拷贝
+[参考](https://juejin.im/post/6844903929705136141)
 
 ## JSON.parse
 最简单的情况就是用JSON.parse
