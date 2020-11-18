@@ -11,7 +11,7 @@
 
 6. eslint配置
 
-7. require和common.js规范，模块导出规范
+7. ~~require和common.js规范，模块导出规范~~
 
 8. 登陆验证方式，jwt，cookie-session
 
@@ -90,7 +90,7 @@ https://juejin.im/post/6844903613790175240
 
 38. [ast](https://segmentfault.com/a/1190000016231512)
 
-39. prototype
+39. ~~prototype~~
 
 ## 要做的项目
 1. 写一套自己的脚手架
