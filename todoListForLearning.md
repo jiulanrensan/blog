@@ -7,7 +7,7 @@
 
 4. webpack常用插件 https://webpack.wuhaolin.cn/%E9%99%84%E5%BD%95/%E5%B8%B8%E7%94%A8Plugins.html DefinePlugin
 
-5. babel配置,babel-polyfill
+5. babel配置,babel-polyfill,babel-loader，使用以及区别
 
 6. eslint配置
 
@@ -112,3 +112,5 @@ https://juejin.im/post/6844903613790175240
 https://github.com/mqyqingfeng/Blog
 
 http://www.dennisgo.cn/
+
+[浏览器工作原理](https://blog.poetries.top/browser-working-principle/)
