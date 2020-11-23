@@ -135,9 +135,243 @@ const Promise4 = class Promise4 {
   }
 }
 
+
+// 增加异常处理reject
+// 状态变为失败时 state => rejected, 并执行onRejected
+const Promise5 = class Promise5 {
+  callbacks = []
+  state = 'pending'
+  value = null
+  constructor (fn) {
+    newIdx++
+    this.newIdx = newIdx
+    console.log('newIdx', this.newIdx);
+    fn(this._resolve.bind(this), this._reject.bind(this))
+  }
+  // then回调中，有两个参数，分别为成功回调和失败回调
+  then(onFulfilled, oRejected){
+    return new Promise5((resolve, reject) => {
+      this._handle({
+        onFulfilled: onFulfilled || null,
+        oRejected: oRejected || null, 
+        resolve: resolve,
+        reject: reject
+      })
+    })
+  }
+  _resolve(value) {
+    // 为什么要区分开value为Promise
+    if (value && (typeof value === 'object' || typeof value === 'function')){
+      let then = value.then
+      if (typeof then === 'function') {
+        then.call(value, this._resolve.bind(this), this._reject.bind(this))
+        return
+      }
+    }
+    this.state = 'fulfilled'
+    this.value = value
+    console.log(this.callbacks);
+    this.callbacks.forEach(fn => this._handle(fn)) 
+  }
+  _reject (err) {
+    this.state = 'rejected'
+    this.value = err
+    console.log(this.callbacks);
+    this.callbacks.forEach(fn => this._handle(fn)) 
+  }
+  _handle (callback) {
+    if (this.state === 'pending') {
+      this.callbacks.push(callback)
+      console.log(this.callbacks);
+      return
+    }
+    
+    let cb = this.state === 'fulfilled' ? callback.onFulfilled : callback.oRejected
+
+    // 如果then回调没有传递任何参数
+    if(!cb) {
+      cb = this.state === 'fulfilled' ? callback.resolve : callback.reject
+      cb(this.value)
+      return
+    }
+
+    // 与上面的区别在于，then回调函数有可能返回值
+    const ret = cb(this.value)
+    cb = this.state === 'fulfilled' ? callback.resolve : callback.reject
+    cb(ret)
+
+  }
+}
+
+// 链式调用then时出现错误，即this._handle中出现错误，使用try-catch捕获
+// 增加catch捕获错误，其他catch就是不传第一个参数的then
+const Promise6 = class Promise6 {
+  callbacks = []
+  state = 'pending'
+  value = null
+  constructor (fn) {
+    newIdx++
+    this.newIdx = newIdx
+    console.log('newIdx', this.newIdx);
+    fn(this._resolve.bind(this), this._reject.bind(this))
+  }
+  // then回调中，有两个参数，分别为成功回调和失败回调
+  then(onFulfilled, oRejected){
+    return new Promise6((resolve, reject) => {
+      this._handle({
+        onFulfilled: onFulfilled || null,
+        oRejected: oRejected || null, 
+        resolve: resolve,
+        reject: reject
+      })
+    })
+  }
+  catch(err){
+    return this.then(null, err)
+  }
+  _resolve(value) {
+    // 为什么要区分开value为Promise
+    if (value && (typeof value === 'object' || typeof value === 'function')){
+      let then = value.then
+      if (typeof then === 'function') {
+        then.call(value, this._resolve.bind(this), this._reject.bind(this))
+        return
+      }
+    }
+    this.state = 'fulfilled'
+    this.value = value
+    console.log(this.callbacks);
+    this.callbacks.forEach(fn => this._handle(fn)) 
+  }
+  _reject (err) {
+    this.state = 'rejected'
+    this.value = err
+    console.log(this.callbacks);
+    this.callbacks.forEach(fn => this._handle(fn)) 
+  }
+  _handle (callback) {
+    if (this.state === 'pending') {
+      this.callbacks.push(callback)
+      console.log(this.callbacks);
+      return
+    }
+    
+    let cb = this.state === 'fulfilled' ? callback.onFulfilled : callback.oRejected
+
+    // 如果then回调没有传递任何参数
+    if(!cb) {
+      cb = this.state === 'fulfilled' ? callback.resolve : callback.reject
+      cb(this.value)
+      return
+    }
+
+    let ret = null
+    try {
+      ret = cb(this.value)
+      cb = this.state === 'fulfilled' ? callback.resolve : callback.reject
+    } catch (error) {
+      // cb(this.value)中出现报错
+      ret = error
+      cb = callback.reject
+    } finally {
+      cb(ret)
+    }
+    
+
+  }
+}
+
+// 增加finally方法
+// finally方法也是then方法的变形，但是finally不再关心状态是哪个
+const Promise7 = class Promise7 {
+  callbacks = []
+  state = 'pending'
+  value = null
+  constructor (fn) {
+    newIdx++
+    this.newIdx = newIdx
+    console.log('newIdx', this.newIdx);
+    fn(this._resolve.bind(this), this._reject.bind(this))
+  }
+  // then回调中，有两个参数，分别为成功回调和失败回调
+  then(onFulfilled, oRejected){
+    return new Promise7((resolve, reject) => {
+      this._handle({
+        onFulfilled: onFulfilled || null,
+        oRejected: oRejected || null, 
+        resolve: resolve,
+        reject: reject
+      })
+    })
+  }
+  catch(err){
+    return this.then(null, err)
+  }
+  finally(done){
+    if (typeof done !== 'function') return this.then()
+    // this.constructor指的是当前实例的构造函数
+    let Promise = this.constructor
+    return this.then(
+      value => Promise.resolve(done()).then(() => value),
+      err => Promise.resolve(done()).then(() => { throw err })
+    )
+  }
+  _resolve(value) {
+    // 为什么要区分开value为Promise
+    if (value && (typeof value === 'object' || typeof value === 'function')){
+      let then = value.then
+      if (typeof then === 'function') {
+        then.call(value, this._resolve.bind(this), this._reject.bind(this))
+        return
+      }
+    }
+    this.state = 'fulfilled'
+    this.value = value
+    console.log(this.callbacks);
+    this.callbacks.forEach(fn => this._handle(fn)) 
+  }
+  _reject (err) {
+    this.state = 'rejected'
+    this.value = err
+    console.log(this.callbacks);
+    this.callbacks.forEach(fn => this._handle(fn)) 
+  }
+  _handle (callback) {
+    if (this.state === 'pending') {
+      this.callbacks.push(callback)
+      console.log(this.callbacks);
+      return
+    }
+    
+    let cb = this.state === 'fulfilled' ? callback.onFulfilled : callback.oRejected
+
+    // 如果then回调没有传递任何参数
+    if(!cb) {
+      cb = this.state === 'fulfilled' ? callback.resolve : callback.reject
+      cb(this.value)
+      return
+    }
+
+    let ret = null
+    try {
+      ret = cb(this.value)
+      cb = this.state === 'fulfilled' ? callback.resolve : callback.reject
+    } catch (error) {
+      // cb(this.value)中出现报错
+      ret = error
+      cb = callback.reject
+    } finally {
+      cb(ret)
+    }
+    
+
+  }
+}
+
 module.exports = {
   Promise1,
   Promise2,
   Promise3,
-  Promise4
+  Promise4,
+  Promise5
 }
