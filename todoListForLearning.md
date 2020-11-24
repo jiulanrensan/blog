@@ -77,6 +77,8 @@ https://segmentfault.com/a/1190000006944760
 33. 首屏加载速度优化
 https://zhuanlan.zhihu.com/p/56121620
 https://juejin.im/post/6844903613790175240
+https://segmentfault.com/a/1190000014348854
+前端性能监控 https://juejin.cn/post/6844903926496493581
 
 34. 多页通信
 
