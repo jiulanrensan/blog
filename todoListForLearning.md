@@ -20,6 +20,8 @@
 10. dom,bom
 
 11. 浏览器渲染原理,https://zhuanlan.zhihu.com/p/101587249,https://segmentfault.com/a/1190000019713766,~~内核~~,iframe,~~进程和线程~~
+https://www.cnblogs.com/cangqinglang/p/8963343.html
+与33点首屏加载速度优化结合看
 
 12. dpr,ratio
 
@@ -80,6 +82,7 @@ https://juejin.im/post/6844903613790175240
 https://segmentfault.com/a/1190000014348854
 前端性能监控 https://juejin.cn/post/6844903926496493581
 
+
 34. 多页通信
 
 35. 滚动穿透，点击穿透
@@ -93,6 +96,8 @@ https://segmentfault.com/a/1190000014348854
 38. [ast](https://segmentfault.com/a/1190000016231512)
 
 39. ~~prototype~~
+
+40. [Learning Git Branching](https://learngitbranching.js.org/?locale=zh_CN)
 
 ## 要做的项目
 1. 写一套自己的脚手架
