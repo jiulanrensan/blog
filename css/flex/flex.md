@@ -57,9 +57,15 @@ flex-basis: auto | <length>;
 ```
 ```
 // flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto，后两个属性可选
+
 // 两个快捷值: auto (1 1 auto) 和 none (0 0 auto)
 flex: <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> 
+// 1. flex为一个值, 无单位数字 则为flex-grow，flex-shrink为1，flex-basis为0%
+// 2. flex为一个尺寸值或百分比, 表示flex-basis,flex-grow 取 1，flex-shrink 取 1
+// 3. 当 flex 取值为两个非负数字，则分别视为 flex-grow 和 flex-shrink 的值，flex-basis 取 0%
+// 4. 当 flex 取值为一个非负数字和一个长度或百分比，则分别视为 flex-grow 和 flex-basis 的值，flex-shrink 取 1
 ```
+[参考](https://segmentfault.com/q/1010000004080910)
 
 ### 如何计算`flex-grow`和`flex-shrink`
 #### `flex-grow`
