@@ -43,3 +43,8 @@
 https://harttle.land/2016/12/28/cors-with-cookie.html
 
 
+## TODO
+1. 手写原理：深拷贝还缺一个函数拷贝，promise未完成
+2. 模块化相关： commonjs模块
+3. babel相关
+4. web安全

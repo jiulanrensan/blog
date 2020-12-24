@@ -3,7 +3,7 @@
 
 2. ~~判断类型:instance,typeof,toString~~
 
-3. webpack预加载, splitchunksplugin
+3. webpack预加载, splitchunksplugin, 异步加载原理(路由懒加载)
 
 4. webpack常用插件 https://webpack.wuhaolin.cn/%E9%99%84%E5%BD%95/%E5%B8%B8%E7%94%A8Plugins.html DefinePlugin
 
